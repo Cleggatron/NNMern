@@ -1,5 +1,8 @@
 import {useEffect, useState} from "react";
 
+//components
+import WorkoutDetails from "../components/WorkoutDetails";
+
 function Home(){
 
     const [workouts, setWorkouts] = useState(null);

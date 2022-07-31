@@ -6,22 +6,22 @@ function Home(){
 
     useEffect(() => {
         const fetchWorkouts = async () => {
-            const response = await fetch("http://localhost:3000/api/workouts");
-            const json = await response.json();
+            const response = await fetch("/api/workouts");
+            const resJson = await response.json();
 
             if(response.ok){
-                setWorkouts(json);
+                setWorkouts(resJson);
             }
         }
 
-        fetchWorkouts();
+        fetchWorkouts()
     }, [])
 
     return(
         <div className="home">
             <div className="workouts">
                 {workouts && workouts.map((workout) => {
-                    <p key={workout.id}>{workout.title}</p>
+                    return <p key={workout._id}>{workout.title}</p>
                 })}
             </div>
         </div>

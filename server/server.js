@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(routes);
+app.use("/api/workouts", routes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`);

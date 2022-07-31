@@ -24,7 +24,7 @@ function Home(){
         <div className="home">
             <div className="workouts">
                 {workouts && workouts.map((workout) => {
-                    return <p key={workout._id}>{workout.title}</p>
+                    return <WorkoutDetails key={workout._id} workout={workout}/>
                 })}
             </div>
         </div>

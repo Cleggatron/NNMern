@@ -22,7 +22,7 @@ router.delete("/:id", (req, res) => {
 })
 
 //Placeholder update a workout
-router.patch("/", (req, res) => {
+router.patch("/:id", (req, res) => {
     res.json({message: "Update a new workout"})
 })
 
